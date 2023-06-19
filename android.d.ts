@@ -1,1 +1,1 @@
-export declare const getAndroidVersion: () => Promise<string>;
+export declare const getAndroidVersion: (googlePlayId) => Promise<string>;

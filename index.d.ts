@@ -5,5 +5,5 @@ declare type CheckVersionResponse = {
     detail: 'remote > local' | 'remote < local' | 'remote === local';
 };
 export declare const compareVersion: (local: string, remote: string) => CheckVersionResponse['result'];
-declare const checkVersion: () => Promise<CheckVersionResponse>;
+declare const checkVersion: (googlePlayId, appStoreId, locale) => Promise<CheckVersionResponse>;
 export default checkVersion;

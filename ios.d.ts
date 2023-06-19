@@ -1,1 +1,1 @@
-export declare const getIOSVersion: () => Promise<string>;
+export declare const getIOSVersion: (appstoreId, locale) => Promise<string>;

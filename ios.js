@@ -1,10 +1,6 @@
-export const getIOSVersion = async () => {
+export const getIOSVersion = async (appstoreId, locale) => {
 
-    const country = "br"
-    const appID = "0000000000";
-
-
-    const response = await fetch(`https://itunes.apple.com/lookup?id=${appID}&country=${country}&${new Date().getTime()}`, {
+    const response = await fetch(`https://itunes.apple.com/lookup?id=${appstoreId}&country=${locale}&${new Date().getTime()}`, {
         headers: {
             'cache-control': 'no-cache',
         },

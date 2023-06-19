@@ -16,7 +16,8 @@ export const compareVersion = (local, remote) => {
     }
 };
 
-const checkVersion = async () => {
+const checkVersion = async (googlePlayId, appstoreId, locale) => {
+
     
     let version;
     let remoteVersion;
@@ -25,9 +26,9 @@ const checkVersion = async () => {
 
     try {
         remoteVersion = (Platform.OS === 'ios')? 
-            await getIOSVersion()
+            await getIOSVersion(appstoreId, locale)
         : 
-            await getAndroidVersion();
+            await getAndroidVersion(googlePlayId);
     }
     catch (e) {
         throw new Error(e.message);

@@ -1,8 +1,8 @@
-export const getAndroidVersion = async () => {
+export const getAndroidVersion = async (googlePlayId) => {
 
-    packageName = "br.com.empresa.exemplo"
+    
 
-    let storeURL = `https://play.google.com/store/apps/details?id=${packageName}`
+    let storeURL = `https://play.google.com/store/apps/details?id=${googlePlayId}`
 
     const response = await fetch(storeURL).then((r) => {
         if (r.status === 200) {
